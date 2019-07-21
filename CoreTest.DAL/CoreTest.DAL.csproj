@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
     <Folder Include="Concrete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoreTest.Core\CoreTest.Core.csproj" />
+    <ProjectReference Include="..\CoreTest.Entities\CoreTest.Entities.csproj" />
   </ItemGroup>
 
 </Project>
