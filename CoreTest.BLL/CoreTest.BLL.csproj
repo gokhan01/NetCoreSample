@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CoreTest.DAL\CoreTest.DAL.csproj" />
+    <ProjectReference Include="..\CoreTest.Entities\CoreTest.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
