@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreTest.BLL\CoreTest.BLL.csproj" />
+    <ProjectReference Include="..\CoreTest.DAL\CoreTest.DAL.csproj" />
   </ItemGroup>
 
 </Project>
