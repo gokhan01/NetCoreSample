@@ -1,4 +1,4 @@
-﻿
+﻿@model CoreTest.Web.Models.ProductListVM
 @{
     Layout = null;
 }
@@ -11,8 +11,20 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
-        Hello World!
-    </div>
+    <table>
+        <tr>
+            <td>Product Name</td>
+            <td>Unit Price</td>
+            <td>Units in Stock</td>
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>

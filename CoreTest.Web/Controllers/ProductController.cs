@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreTest.BLL.Abstract;
+using CoreTest.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreTest.Web.Controllers
@@ -17,7 +18,12 @@ namespace CoreTest.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var products = _productService.GetAll();
+            ProductListVM model = new ProductListVM()
+            {
+                Products = products
+            };
+            return View(model);
         }
     }
 }
