@@ -6,6 +6,7 @@ using CoreTest.BLL.Abstract;
 using CoreTest.BLL.Concrete;
 using CoreTest.DAL.Abstract;
 using CoreTest.DAL.Concrete.EntityFramework;
+using CoreTest.Web.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +32,9 @@ namespace CoreTest.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseFileServer();
+            app.UseNodeModules(env.ContentRootPath);
 
             app.UseMvcWithDefaultRoute();
         }
